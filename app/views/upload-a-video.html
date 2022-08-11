@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Upload a video</h1>
+
+      <form class="form" action="/contact-details" method="post">
+
+        <p>Record a video of yourself saying your name and your national insurance number. You can use a smartphone or a webcam.<br>
+          <h2 class="govuk-heading-m">Select video file</h2>
+              <div class="govuk-inset-text">
+                We can accept the following file types: .jpg .jpeg .png .pdf<br>    
+                We can accept a file with the maximum size of 15mb. 
+              </div>
+              <div class="govuk-form-group">
+
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+              </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Upload my video</button>
+          <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I need help uploading my video.
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            !!!!! Placeholder text for video !!!!!
+          </div>
+        </details>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

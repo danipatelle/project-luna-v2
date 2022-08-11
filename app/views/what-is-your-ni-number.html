@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What is your National Insurance number?</h1>
+
+      <form class="form" action="/upload-photo-id" method="post">
+  
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-10">
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I cannot find my National Insurance number.
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can find your National Insurance number on:<br>
+            <li>your payslip</li>
+            <li>P60</li>
+            <li>letters about tax, pensions and benefits</li>
+            <li>your personal tax account.</li>
+          </div>
+        </details>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

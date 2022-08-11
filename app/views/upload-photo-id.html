@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Which type of photo ID are you uploading?</h1>
+
+      <form class="form" action="/photo-confirmation" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload-photo-id" name="upload-photo-id" type="radio" value="passport">
+                <label class="govuk-label govuk-radios__label" for="upload-photo-id">
+                  Passport
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload-photo-id-2" name="upload-photo-id" type="radio" value="drivinglicence">
+                <label class="govuk-label govuk-radios__label" for="upload-photo-id-2">
+                  Driving licence
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload-photo-id-3" name="upload-photo-id" type="radio" value="formalid">
+                <label class="govuk-label govuk-radios__label" for="upload-photo-id-3">
+                  Formal ID card
+                </label>
+              </div>
+            </div>
+              <br><br>
+            <h2 class="govuk-heading-m">Select ID file</h2>
+              <div class="govuk-inset-text">
+                We can accept the following file types: .jpg .jpeg .png .pdf<br>    
+                We can accept a file with the maximum size of 15mb. 
+              </div>
+              <div class="govuk-form-group">
+
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+              </div>
+
+        
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Submit my photo ID</button>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I need help uploading my ID.
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            !!!!! Placeholder text for video !!!!!
+          </div>
+        </details>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
