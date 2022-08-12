@@ -25,7 +25,7 @@
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            Sarah Philips
+            {{ data['usersname'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/what-is-your-name">
@@ -39,7 +39,7 @@
             National insurance number
           </dt>
           <dd class="govuk-summary-list__value">
-            JH 74 58 85 C
+            {{ data['national-insurance-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/what-is-your-ni-number">
@@ -53,8 +53,7 @@
             Photo ID
           </dt>
           <dd class="govuk-summary-list__value">
-            Passport
-            <br>filename.jpg
+            {{ data['upload-photo-id'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/upload-photo-id">
@@ -68,8 +67,7 @@
             ID verification
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>Upload video<br>
-              filename.mp4
+            <p>{{ data['verify-documents'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/verify-documents">
@@ -83,8 +81,7 @@
             Contact details
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>Email<br>
-              sarahphillips24@gmail.com
+            <p>{{ data['contact'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/contact-details">

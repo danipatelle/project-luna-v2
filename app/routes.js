@@ -8,10 +8,10 @@ router.post('/verify-method-answer', function (req, res) {
     var verifyMethod = req.session.data['verify-documents']
 
     // Check whether the variable matches a condition
-    if (verifyMethod == "uploadvideo"){
+    if (verifyMethod == "Upload a video"){
       // Send user to next page
       res.redirect('/upload-a-video')
-    } else if (verifyMethod == "virtualmeet"){
+    } else if (verifyMethod == "Arrange a virtual meeting"){
         // Send user to next page
         res.redirect('/arrange-virtual-meeting')
     } else {
