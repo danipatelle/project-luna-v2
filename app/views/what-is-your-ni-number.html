@@ -16,11 +16,12 @@
       <h1 class="govuk-heading-xl">What is your National Insurance number?</h1>
 
       <form class="form" action="/upload-photo-id" method="post">
-  
+
         <div class="govuk-form-group">
-          <label class="govuk-label" for="width-10">
-          </label>
-          <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+          <div id="national-insurance-number-hint" class="govuk-hint">
+            It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
@@ -32,9 +33,7 @@
             </span>
           </summary>
           <div class="govuk-details__text">
-            You can find your National Insurance number on:<br>
-            <li>your payslip</li>
-            <li>P60</li>
+            You can also find your National Insurance number on:<br>
             <li>letters about tax, pensions and benefits</li>
             <li>your personal tax account.</li>
           </div>
